@@ -2,7 +2,7 @@
     require 'function.php';
     $mahasiswa = query("SELECT * FROM data_mhs");
     
-    if(isset($_POST["cari"])){  
+        if(isset($_POST["cari"])){  
         $mahasiswa = cari($_POST["keyword"]);
     }
 ?>
@@ -36,12 +36,12 @@
          <?php foreach ($mahasiswa as $mhs) : ?>
             <tr>
                 <td><?= $i ?></td>
-                <td>
-                    <a href="">Ubah</a> |
-                    <a href="">Hapus</a>
+                <td> 
+                    <a href="ubah.php?id=<?=$mhs['id'];?>">Edit</a>
+                    <a href="hapus.php">Hapus</a>
                 </td>
                 <td><img src="img/<?=$mhs['gambar']?>" width="100px" alt=""></td>
-                <td><?= $mhs['nim']; ?></td>
+                <td><?= $mhs['id']; ?></td>
                 <td><?= $mhs['nama']; ?></td>
                 <td><?= $mhs['jurusan']; ?></td>
                 <td><?= $mhs['email']; ?></td>
