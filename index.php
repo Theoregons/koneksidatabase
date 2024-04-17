@@ -16,12 +16,15 @@
 </head>
 <body>
     <h2>Daftar Mahasiswa</h2>
-
+    <a href="tambah.php">
+        <button>Tambah Data</button>
+    </a>
+    <br><br>
     <form action="" method="POST">
         <input type="text" name="keyword" placeholder="Masukan kata kunci pencarian">
         <button type="submit" name="cari">Cari</button>
     </form>
-
+    <br>
     <table border="1" cellpadding="10" cellspacing="0">
         <tr>
             <td>#</td>
@@ -41,7 +44,7 @@
                     <a href="hapus.php">Hapus</a>
                 </td>
                 <td><img src="img/<?=$mhs['gambar']?>" width="100px" alt=""></td>
-                <td><?= $mhs['id']; ?></td>
+                <td><?= $mhs['nim']; ?></td>
                 <td><?= $mhs['nama']; ?></td>
                 <td><?= $mhs['jurusan']; ?></td>
                 <td><?= $mhs['email']; ?></td>
