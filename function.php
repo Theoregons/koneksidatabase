@@ -11,6 +11,11 @@
         return $rows;
     }
 
+    function cari($keyword){
+        $query = "SELECT * FROM data_mhs where nama like '%$keyword%' ";
+        return query($query); 
+    }
+
     // $mhs = mysqli_fetch_array($result);
     // var_dump($mhs);
     
